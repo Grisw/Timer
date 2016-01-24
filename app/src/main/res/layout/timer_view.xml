@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/timer_view_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clock_text_size"
+        android:text="00"
+        android:layout_marginEnd="@dimen/timer_view_text_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clock_text_size"
+        android:layout_marginEnd="@dimen/timer_view_text_size"
+        android:text=":"/>
+
+    <TextView
+        android:id="@+id/timer_view_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clock_text_size"
+        android:layout_marginEnd="@dimen/timer_view_text_size"
+        android:text="00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clock_text_size"
+        android:layout_marginEnd="@dimen/timer_view_text_size"
+        android:text="."/>
+
+    <TextView
+        android:id="@+id/timer_view_millis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clock_text_size"
+        android:text="00"/>
+
+</LinearLayout>
