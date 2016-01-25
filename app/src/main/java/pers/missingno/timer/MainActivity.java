@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_count_down) {
             Intent intent=new Intent(this,Main2Activity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            //noinspection unchecked
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this,
                     new Pair<View, String>(fab, "fab"),
                     new Pair<View, String>(recyclerView, "recycler"),
@@ -121,13 +122,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_recycler_view, parent, false);
-            ViewHolder holder=new ViewHolder(view);
-            return holder;
+            return new ViewHolder(view);
         }
 
         @Override
         public void onBindViewHolder(final RecyclerAdapter.ViewHolder holder, final int position) {
             holders.add(holder);
+            holder.button.setEnabled(true);
             holder.numberView.setText("" + (position + 1));
             holder.timerView.setTime(list.get(position));
             holder.timerView.setIsTypeCountDown(isTypeCountDown);

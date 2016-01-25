@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,9 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -133,6 +130,7 @@ public class Main2Activity extends AppCompatActivity {
         if (id == R.id.action_count) {
             Intent intent=new Intent(this,MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            //noinspection unchecked
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this,
                     new Pair<View, String>(fab, "fab"),
                     new Pair<View, String>(recyclerView, "recycler"),
